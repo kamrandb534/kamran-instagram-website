@@ -43,7 +43,7 @@ const Register = () => {
     if (form.avatar) formData.append("avatar", form.avatar);
 
     try {
-      const res = await axios.post("https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/users/register", formData);
+      const res = await axios.post("https://kamran-backend-braah4dbapbshzg5.ukwest-01.azurewebsites.net//api/users/register", formData);
       if (res.data.message) {
         alert(res.data.message);
       } else {

@@ -36,7 +36,7 @@ const MediaDetail = () => {
 
   const handleCommentSubmit = async () => {
     if (!newComment) return;
-    await axios.post("https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/interact/comment", {
+    await axios.post("https://kamran-backend-braah4dbapbshzg5.ukwest-01.azurewebsites.net//api/interact/comment", {
       user_id: 1,
       media_id: id,
       content: newComment,
@@ -47,7 +47,7 @@ const MediaDetail = () => {
 
   const handleRatingSubmit = async () => {
     if (!rating) return;
-    await axios.post("http://localhost:8080/api/interact/rating", {
+    await axios.post("https://kamran-backend-braah4dbapbshzg5.ukwest-01.azurewebsites.net/api/interact/rating", {
       user_id: 1,
       media_id: id,
       rating,
@@ -68,11 +68,11 @@ const MediaDetail = () => {
               <video
                 controls
                 className="w-full max-h-[600px] object-contain"
-                src={`http://localhost:8080${media.file_path}`}
+                src={`https://kamran-backend-braah4dbapbshzg5.ukwest-01.azurewebsites.net/${media.file_path}`}
               />
             ) : (
               <img
-                src={`http://localhost:8080${media.file_path}`}
+                src={`https://kamran-backend-braah4dbapbshzg5.ukwest-01.azurewebsites.net/${media.file_path}`}
                 alt="media"
                 className="w-full max-h-[600px] object-contain"
               />

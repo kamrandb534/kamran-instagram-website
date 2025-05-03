@@ -66,13 +66,13 @@ const ManageUploads = () => {
               <div className="relative h-48 flex items-center justify-center">
                 {item.file_path.endsWith(".mp4") ? (
                   <video 
-                    src={`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net/${item.file_path}`}
+                    src={`https://kamran-backend-braah4dbapbshzg5.ukwest-01.azurewebsites.net/${item.file_path}`}
                     controls
                     className="max-h-full max-w-full object-contain"
                   />
                 ) : (
                   <img 
-                    src={`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net/${item.file_path}`}
+                    src={`https://kamran-backend-braah4dbapbshzg5.ukwest-01.azurewebsites.net/${item.file_path}`}
                     className="max-h-full max-w-full object-contain"
                     alt={item.title}
                   />
