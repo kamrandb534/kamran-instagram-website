@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/api/users/login", form);
+      const res = await axios.post("https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/users/login", form);
       const user = res.data.user;
   
       if (user) {

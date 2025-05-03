@@ -13,7 +13,7 @@ const ManageUploads = () => {
 
     const fetchUploads = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/media/creator/${storedUser.id}`);
+        const res = await axios.get(`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/media/creator/${storedUser.id}`);
         setUploads(res.data);
       } catch (err) {
         console.error("Fetch failed", err);
@@ -39,10 +39,10 @@ const ManageUploads = () => {
 
   const handleUpdate = async (mediaId) => {
     try {
-      await axios.put(`http://localhost:8080/api/media/update/${mediaId}`, editForm);
+      await axios.put(`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/media/update/${mediaId}`, editForm);
       alert("Updated successfully");
       setEditingId(null);
-      const res = await axios.get(`http://localhost:8080/api/media/creator/${JSON.parse(localStorage.getItem("user")).id}`);
+      const res = await axios.get(`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/media/creator/${JSON.parse(localStorage.getItem("user")).id}`);
       setUploads(res.data);
     } catch (err) {
       alert("Update failed");
@@ -66,13 +66,13 @@ const ManageUploads = () => {
               <div className="relative h-48 flex items-center justify-center">
                 {item.file_path.endsWith(".mp4") ? (
                   <video 
-                    src={`http://localhost:8080${item.file_path}`}
+                    src={`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net/${item.file_path}`}
                     controls
                     className="max-h-full max-w-full object-contain"
                   />
                 ) : (
                   <img 
-                    src={`http://localhost:8080${item.file_path}`}
+                    src={`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net/${item.file_path}`}
                     className="max-h-full max-w-full object-contain"
                     alt={item.title}
                   />

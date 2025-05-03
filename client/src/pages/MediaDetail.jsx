@@ -17,13 +17,13 @@ const MediaDetail = () => {
 
   const fetchMediaData = async () => {
     try {
-      const mediaRes = await axios.get(`http://localhost:8080/api/media/${id}`);
+      const mediaRes = await axios.get(`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/media/${id}`);
       setMedia(mediaRes.data);
 
-      const commentsRes = await axios.get(`http://localhost:8080/api/interact/comments/${id}`);
+      const commentsRes = await axios.get(`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/interact/comments/${id}`);
       setComments(commentsRes.data);
 
-      const ratingRes = await axios.get(`http://localhost:8080/api/interact/rating/${id}`);
+      const ratingRes = await axios.get(`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/interact/rating/${id}`);
       setAverageRating(ratingRes.data.average_rating);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -36,7 +36,7 @@ const MediaDetail = () => {
 
   const handleCommentSubmit = async () => {
     if (!newComment) return;
-    await axios.post("http://localhost:8080/api/interact/comment", {
+    await axios.post("https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/interact/comment", {
       user_id: 1,
       media_id: id,
       content: newComment,

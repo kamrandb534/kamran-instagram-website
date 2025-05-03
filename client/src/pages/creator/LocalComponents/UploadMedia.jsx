@@ -33,7 +33,7 @@ const UploadMedia = () => {
     formData.append("creator_id", user.id);
 
     try {
-      const res = await axios.post("http://localhost:8080/api/media/upload", formData);
+      const res = await axios.post("https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/media/upload", formData);
       alert("Media uploaded!");
       window.location.reload(); // Reload the page after successful upload
     } catch (err) {

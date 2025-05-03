@@ -11,7 +11,7 @@ const Gallery = () => {
   useEffect(() => {
     const fetchMedia = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/media/all");
+        const res = await axios.get("https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/media/all");
         setMediaList(res.data);
       } catch (err) {
         console.error("Failed to load media", err);

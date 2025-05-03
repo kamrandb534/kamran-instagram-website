@@ -15,7 +15,7 @@ const MediaSearch = () => {
 
   const fetchMedia = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/media/all", {
+      const res = await axios.get("https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net//api/media/all", {
         params: {
           search: query,
           type,
@@ -87,7 +87,7 @@ const MediaSearch = () => {
               {media.file_path.endsWith(".mp4") ? (
                 <>
                   <video
-                    src={`http://localhost:8080${media.file_path}`}
+                    src={`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net/${media.file_path}`}
                     controls
                     className="w-full h-full object-cover"
                   />
@@ -99,7 +99,7 @@ const MediaSearch = () => {
               ) : (
                 <>
                   <img
-                    src={`http://localhost:8080${media.file_path}`}
+                    src={`https://kamran-backend-braah4dbapbshzg5.uksouth-01.azurewebsites.net/${media.file_path}`}
                     alt={media.title}
                     className="w-full h-full object-cover"
                   />
